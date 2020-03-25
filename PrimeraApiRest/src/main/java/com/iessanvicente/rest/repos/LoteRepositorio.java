@@ -11,6 +11,6 @@ import com.iessanvicente.rest.models.Lote;
 @Repository
 public interface LoteRepositorio extends JpaRepository<Lote, Long>{
 
-	 @Query("select l from lote l JOIN FETCH l.productos WHERE l.id = :id")
+	 @Query("select l from Lote l JOIN FETCH l.productos WHERE l.id = :id")
 	 public Optional<Lote> findByJoinFetch(Long id);
 }
